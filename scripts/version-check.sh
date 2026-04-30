@@ -40,8 +40,8 @@ SKILL_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 SKILL_MD="${SKILL_ROOT}/SKILL.md"
 CACHE_FILE="${SCRIPT_DIR}/.version-check-cache"
 CACHE_TTL=$((24 * 3600))          # 1 天
-REPO_API="https://api.github.com/repos/bellchen/cert-lifecycle-harness/releases/latest"
-UPDATE_CMD="npx skills add https://github.com/bellchen/cert-lifecycle-harness"
+REPO_API="https://api.github.com/repos/dimayip/cert-lifecycle-harness/releases/latest"
+UPDATE_CMD="npx skills add https://github.com/dimayip/cert-lifecycle-harness"
 CURL_TIMEOUT=3
 
 # ── 输出函数 ───────────────────────────────────────────────────────────────

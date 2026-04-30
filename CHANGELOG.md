@@ -22,7 +22,7 @@ Skill 的核心规则（拓扑识别、证书链核查 D1-D5、通配符盘点�
 **新增**
 - `scripts/version-check.sh`：静默的版本自检脚本
   - 读取本地 `SKILL.md` frontmatter `version` 字段
-  - 调用 GitHub Releases API（`api.github.com/repos/bellchen/cert-lifecycle-harness/releases/latest`）拉取最新 tag
+  - 调用 GitHub Releases API（`api.github.com/repos/dimayip/cert-lifecycle-harness/releases/latest`）拉取最新 tag
   - 用 `sort -V` 做语义版本对比
   - 本地 `scripts/.version-check-cache` 带 **24h TTL**，避免频繁打扰 GitHub
   - curl 硬超时 **3s**，网络失败 / API 限流 / 解析失败 **一律退出码 0**（铁律：绝不阻塞 Agent）
@@ -41,7 +41,7 @@ Skill 的核心规则（拓扑识别、证书链核查 D1-D5、通配符盘点�
 
 **更新命令**
 ```
-npx skills add https://github.com/bellchen/cert-lifecycle-harness
+npx skills add https://github.com/dimayip/cert-lifecycle-harness
 ```
 
 ### 为什么版本号停在 v1.0.x 而非跳 v1.1
