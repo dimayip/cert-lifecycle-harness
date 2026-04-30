@@ -16,6 +16,24 @@
 
 ---
 
+## Install
+
+Via [skills.sh](https://skills.sh) (works for Claude Code / Cursor / Codex / CodeBuddy / OpenCode / 50+ agents):
+
+```bash
+# global install (all projects)
+npx skills add dimayip/cert-lifecycle-harness -g -a claude-code
+
+# project-only install (current repo)
+npx skills add dimayip/cert-lifecycle-harness -a codebuddy
+```
+
+Or drop the repo into your agent's skills directory manually (e.g. `~/.claude/skills/cert-lifecycle-harness/` or `.codebuddy/skills/cert-lifecycle-harness/`).
+
+Compatible with the [Agent Skills Specification](https://agentskills.io).
+
+---
+
 ## Why this skill exists
 
 Certificate rollover is a textbook **"expire = outage"** high-risk operation:

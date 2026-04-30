@@ -17,6 +17,24 @@
 
 ---
 
+## 安装
+
+通过 [skills.sh](https://skills.sh) 安装（支持 Claude Code / Cursor / Codex / CodeBuddy / OpenCode 等 50+ Agent）：
+
+```bash
+# 全局安装（对所有项目可用）
+npx skills add dimayip/cert-lifecycle-harness -g -a claude-code
+
+# 仅安装到当前项目
+npx skills add dimayip/cert-lifecycle-harness -a codebuddy
+```
+
+或者手动把仓库放到对应 Agent 的 skills 目录下（例如 `~/.claude/skills/cert-lifecycle-harness/` 或 `.codebuddy/skills/cert-lifecycle-harness/`）。
+
+兼容 [Agent Skills Specification](https://agentskills.io)。
+
+---
+
 ## 为什么需要这个 Skill
 
 证书更换是典型的"**过期即故障**"的高危运维场景：
