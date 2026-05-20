@@ -93,16 +93,16 @@ Full protocol and cross-vendor API reference: [`SKILL.md §4`](./SKILL.md) and [
 
 ---
 
-## Repository layout (v1.0)
+## Repository layout
 
-v1.0 follows skill-creator's progressive-disclosure principle: the main `SKILL.md` is ≤ 600 lines; deep rules are pushed down to `references/` and loaded on demand.
+Follows skill-creator's progressive-disclosure principle: the main `SKILL.md` is ≤ 600 lines; deep rules are pushed down to `references/` and loaded on demand.
 
 ```
 cert-lifecycle-harness/
 ├── SKILL.md                              # Main spec loaded by the Agent (v1.0, 14 sections)
 ├── README.md                             # (this file) English version
 ├── README.zh-CN.md                       # Chinese version
-├── CHANGELOG.md                          # ⭐ Version history (v0.1 → v1.0)
+├── CHANGELOG.md                          # ⭐ Version history
 │
 ├── references/                           # ⭐ Deep rules, loaded on demand (new in v1.0)
 │   ├── README.md                         #   Index · by load scenario
@@ -123,9 +123,7 @@ cert-lifecycle-harness/
 │   ├── 04-planning-playbook.md           #   Phase 4 · Plan elasticity + Decision Brief
 │   ├── 05-dry-run-matrix.md              #   Phase 5 · Dry-run library
 │   ├── 06-verify-rollback-playbook.md    #   Phase 6 · Six-layer verify + rollback granularity
-│   ├── runbook-templates/                #   Runbook templates per binding-point type
-│   ├── capability-matrix.md              #   Capability matrix contract
-│   └── capability-alignment-report.md    #   Declaration-vs-delivery report
+│   └── runbook-templates/                #   Runbook templates per binding-point type
 │
 ├── review-guides/                        # ⭐ Layered review architecture (core innovation)
 │   ├── L3-decision-review.md             #   5 min · for managers
@@ -162,11 +160,7 @@ Every Phase **must stop and wait for a human** — this is what separates this s
 
 ---
 
-## Current version (v1.0 · skill-creator refactor GA)
-
-v1.0 resolves v0.9.4's SKILL.md bloat (1327 lines / 80 KB, heavily violating progressive-disclosure) and brings it down to ≈ 594 lines / 32 KB. **Zero information loss**: deep rules are relocated to `references/`, and historical version notes are consolidated in `CHANGELOG.md`.
-
-### v1.0 capability map
+## Capability map
 
 | Domain | Key feature | Location |
 |---|---|---|
@@ -204,23 +198,6 @@ v1.0 resolves v0.9.4's SKILL.md bloat (1327 lines / 80 KB, heavily violating pro
 - Single-spend decision must go through procurement (≥ 2 weeks)
 
 **Otherwise pick 🟡 Standard Path**.
-
----
-
-## Evolution snapshot
-
-| Version | Date | Key change |
-|---|---|---|
-| v0.1 | 2026-04-23 | Skeleton landed: 5-dim matrix + layered review + seven-check admission + script TEMPLATE |
-| v0.2–0.4 | 2026-04-23 | Intake / DNS probes / SAN closure / fact calibration |
-| v0.5 | 2026-04-23 | 4 case walkthroughs (F1–F4) + complexity triage + 6 Phase playbooks + G-class self-check |
-| v0.6–0.7 | 2026-02/03 | Four-tier inquiry + strict tech-governance α boundary + certificate era context |
-| v0.8–0.9.1 | 2026-03/04 | Delivery-to-disk hard constraint + CSR three options + multi-option neutralization |
-| v0.9.3 | 2026-04-27 | Topology detection + wildcard subdomain inventory (jianxianexuetang.cn / w1.cas.sdo.com dual case) |
-| v0.9.4 | 2026-04-28 | Chain integrity + multi-client compatibility (D1–D5) |
-| **v1.0** | **2026-04-28** | **skill-creator refactor: SKILL.md slimmed 80% → 32 KB; deep rules relocated to references/; history consolidated in CHANGELOG.md; zero loss** |
-
-> 📌 Full version log: see [`CHANGELOG.md`](./CHANGELOG.md).
 
 ---
 

@@ -93,7 +93,7 @@ updated: 2026-04-23
 
 ---
 
-## 6. SAN 极少时的反向扩展启发式（v0.5 新增 · 解决 C7 卡点）
+## 6. SAN 极少时的反向扩展启发式
 
 当 SAN 数 ≤ 3 时，传统闭包发现 1 轮就收敛，价值大幅缩水。Agent 应启用**反向扩展启发式**：
 
@@ -107,7 +107,7 @@ updated: 2026-04-23
 
 ---
 
-## 7. 部分授权阻塞的降级策略（v0.5 新增 · 解决 D10 卡点）
+## 7. 部分授权阻塞的降级策略
 
 **场景**：多 zone 场景下，部分 zone 授权未就位（走审批 / 凭证丢失），但整体闭包不能干等。
 
@@ -176,8 +176,6 @@ updated: 2026-04-23
 
 ## 9. 相关文件
 
-- [`../SKILL.md § 0.1`](../SKILL.md) — SAN 闭包发现 / DNS 探针的根本能力定义
-- [`../SKILL.md § 0.3`](../SKILL.md) — 复杂度分流三档
+- [`../SKILL.md`](../SKILL.md) — SAN 闭包发现与 DNS 探针的根本能力定义、复杂度分流三档
 - [`02-scope-lock-and-reflow.md`](./02-scope-lock-and-reflow.md) — Phase 2 的 Scope Lock + 回流机制
 - [`03-risk-assessment-playbook.md`](./03-risk-assessment-playbook.md) — Phase 3 风险评估方法论
-- [`capability-matrix.md`](./capability-matrix.md) — 能力维度定义

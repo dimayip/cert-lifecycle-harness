@@ -95,15 +95,14 @@ npx skills add dimayip/cert-lifecycle-harness -a codebuddy
 
 ---
 
-## 仓库结构（v1.0）
+## 仓库结构
 
-v1.0 遵循 skill-creator 的渐进披露原则：主文件 `SKILL.md` ≤ 600 行，深度规则下沉到 `references/`，按需加载。
-
+遵循 skill-creator 的渐进披露原则：主 `SKILL.md` ≤ 600 行；深度规则下沉到 `references/`，按需加载。
 ```
 cert-lifecycle-harness/
 ├── SKILL.md                              # Agent 加载执行的主规格（v1.0，14 章节）
 ├── README.zh-CN.md                       # 本文件
-├── CHANGELOG.md                          # ⭐ 版本演进集中记录（v0.1 → v1.0）
+├── CHANGELOG.md                          # ⭐ 版本演进集中记录
 │
 ├── references/                           # ⭐ 深度规则按需加载（v1.0 新增）
 │   ├── README.md                         #   索引 · 按加载场景
@@ -124,9 +123,7 @@ cert-lifecycle-harness/
 │   ├── 04-planning-playbook.md           #   Phase 4 · 方案弹性 + Decision Brief
 │   ├── 05-dry-run-matrix.md              #   Phase 5 · 演练方法库
 │   ├── 06-verify-rollback-playbook.md    #   Phase 6 · 六层验证 + 回滚粒度
-│   ├── runbook-templates/                #   按绑定点类型的 Runbook 模板
-│   ├── capability-matrix.md              #   能力矩阵契约
-│   └── capability-alignment-report.md    #   声明兑现报告
+│   └── runbook-templates/                #   按绑定点类型的 Runbook 模板
 │
 ├── review-guides/                        # ⭐ 分层 Review 架构（核心创新）
 │   ├── L3-decision-review.md             #   5 min · 给管理者
@@ -163,12 +160,7 @@ Phase 6  验证（D1-D5 五维证书链 + 六层验证矩阵；按 cert_role 裁
 
 ---
 
-## 当前版本（v1.0 · skill-creator 重构定版）
-
-v1.0 解决了 v0.9.4 SKILL.md 臃肿问题（原 1327 行 / 80KB，严重违反渐进披露原则），落到 ≈ 594 行 / 32KB。
-**零信息损失**：所有深度规则下沉到 `references/`，历史版本印记集中到 `CHANGELOG.md`。
-
-### v1.0 核心能力地图
+## 能力地图
 
 | 能力域 | 关键特性 | 落地位置 |
 |---|---|---|
@@ -206,23 +198,6 @@ v1.0 解决了 v0.9.4 SKILL.md 臃肿问题（原 1327 行 / 80KB，严重违反
 - 单笔预算决策需走采购流程（≥ 2 周审批）
 
 **其余情况选 🟡 Standard Path**。
-
----
-
-## 演进史速览
-
-| 版本 | 日期 | 关键变更 |
-|---|---|---|
-| v0.1 | 2026-04-23 | 骨架落盘：5 维矩阵 + 分层 Review + 七问验收 + 脚本 TEMPLATE |
-| v0.2-0.4 | 2026-04-23 | Intake / DNS 探针 / SAN 闭包发现 / 事实校准 |
-| v0.5 | 2026-04-23 | 4 案例推演（F1-F4）+ 复杂度分流 + 6 份 Phase playbook + G 类自检 |
-| v0.6-0.7 | 2026-02/03 | 四档发问协议 + 技术-治理边界 α 严格版 + 证书时代背景 |
-| v0.8-0.9.1 | 2026-03/04 | 交付落盘硬约束 + CSR 三档选项 + 多选项中性化 |
-| v0.9.3 | 2026-04-27 | 基础设施拓扑识别 + 通配符子域盘点（jianxianexuetang.cn / w1.cas.sdo.com 双案例）|
-| v0.9.4 | 2026-04-28 | 证书链完整性与多客户端兼容性核查（D1-D5）|
-| **v1.0** | **2026-04-28** | **skill-creator 重构：SKILL.md 瘦身 80% → 32KB；深度规则下沉 references/；历史印记集中 CHANGELOG.md；零信息损失** |
-
-> 📌 完整版本变更见 [`CHANGELOG.md`](./CHANGELOG.md)。
 
 ---
 
